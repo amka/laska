@@ -4,7 +4,7 @@ import 'package:laska/laska.dart';
 
 // Custom middleware that checks user access.
 class Acl implements Middleware {
-  final allowedRoles;
+  final List<String> allowedRoles;
 
   Acl(this.allowedRoles);
 

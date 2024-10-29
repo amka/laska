@@ -29,7 +29,8 @@ class BasicAuth implements Middleware {
 
       // Check auth digest
       if (digest == authHeader.substring(6)) {
-        return next(c);
+        next(c);
+        return;
       }
 
       return sendUnauthorized(context);
